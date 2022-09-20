@@ -1,7 +1,24 @@
+import vehicles.BodyStyle;
+import vehicles.Vehicle;
+import vehicles.ElectricVehicle;
+import vehicles.GasVehicle;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * <p>see also {@link vehicles.Vehicle}
+ * Calculating Vehicles' traveling cost.
+ * 
+ * @author              Hyun Ho Kim
+ * @version             1.0
+ * @since               1.0
+ * 
+ */
 public class TravelCost {
+    /**
+     * printing out all the calculated examples
+     * @since               1.0
+     * @param args          argument
+     */
     public static void main(String[] args) {
         ArrayList<Vehicle> vehicles = new ArrayList<>();
         vehicles.add(new ElectricVehicle(2022, "Telsa",    "Model S Plaid",   BodyStyle.Sedan,     297, 100  ));
@@ -17,14 +34,29 @@ public class TravelCost {
         vehicles.add(new GasVehicle(     2022, "Chrysler", "Pacifica",        BodyStyle.Minivan,    24,  19  ));
         vehicles.add(new GasVehicle(     2022, "Chrysler", "Pacifica Hybrid", BodyStyle.Minivan,    30,  16.5));
 
+        /**
+         * scan a input
+         */
         Scanner in = new Scanner(System.in);
         System.out.print("What is the price per gallon of gas (dollars)? ");
+        /**
+         * getting the price of a gallon from a user
+         */
         GasVehicle.dollarsPerGallonOfGas = in.nextDouble();
         System.out.print("What is the price per kWh of electricity (cents)? ");
+        /**
+         * getting the price of one killowatt from a user   
+         */
         ElectricVehicle.centsPerKwhOfElectricity = in.nextDouble();
+        // ElectricVehicle.centsPerKwhOfElectricity = in.nextDouble();
         System.out.print("How many miles is your trip? ");
+        /**
+         * getting how many miles the user has driven
+         */
         double mile = in.nextDouble();
-
+        /**
+         * print out the result
+         */
         for (Vehicle v: vehicles) {
             System.out.printf("$ %6.2f (range %d) %s\n", v.dollarsToTravel(mile), Math.round(v.range()), v);
         }
