@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project name="Shapes Project" default="build">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="doc.dir" value="doc"/>
+
+    <presetdef name="javac">
+        <javac includeantruntime="false" />
+    </presetdef>
+
+    <target name="build" description="Compile source tree java files">
+        <mkdir dir="."/>
+        <javac destdir="." source="14" target="14"
+               debug="ture" deprecation="false" optimize="false"
+               failonerror="true">
+            <src path="."/>
+        </javac>
+    </target>
+    <target name="clean" description="Clean output files">
+        <delete>
+            <fileset dir=".">
+                <include name="**/*.class"/>
+            </fileset>
+        </delete>
+    </target>
+
+</project> 
