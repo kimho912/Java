@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     Matrix3 m2;
 
     for (int i=2; i<argc; i++) {
-        std::string file{argv[2]};
+        std::string file{argv[i]};
         std::ifstream ist{file};
         if (!ist) throw std::runtime_error{"can't ope input file " + file};
     
