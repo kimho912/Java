@@ -1,0 +1,167 @@
+====================
+HOMEWORK P12 RESULTS
+====================
+
+Fall 2022
+
+
+FULL CREDIT
+===========
+
+NOTE: These are measurements which may vary plus your opinions which may vary a LOT. We won't grade for "correctness", just completeness.
+
+QUESTION 1: What Solver command line arguments did you use to achieve a 30 to 45 second runtime? Note: We're only interested in the "real" seconds for this question.
+
+
+
+time java Solver --slices 400000000 poly4.poly
+
+
+
+QUESTION 2: Provide the full output (including the time command) for your program, with 1 to 16 threads. **Ensure that the result is the same for all 16 runs.** (The root found may vary in the least significant digits.) With bash, you can run all of these with a single command if you like, adding whatever Solver command line arguments you identified in QUESTION 1: 
+
+for i in {1..16} ; do time java Solver --threads $i --slices 400000000 poly4.poly ; done 
+Loading poly4.poly... done
+
+threads = 1: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.29s user 0.28s system 95% cpu 38.099 total
+Loading poly4.poly... done
+
+threads = 2: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  35.93s user 0.23s system 98% cpu 36.685 total
+Loading poly4.poly... done
+
+threads = 3: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.76s user 0.29s system 95% cpu 38.877 total
+Loading poly4.poly... done
+
+threads = 4: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.01s user 0.25s system 98% cpu 36.953 total
+Loading poly4.poly... done
+
+threads = 5: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.06s user 0.21s system 97% cpu 37.265 total
+Loading poly4.poly... done
+
+threads = 6: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.04s user 0.21s system 98% cpu 36.920 total
+Loading poly4.poly... done
+
+threads = 7: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.21s user 0.22s system 97% cpu 37.424 total
+Loading poly4.poly... done
+
+threads = 8: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  35.68s user 0.17s system 99% cpu 36.099 total
+Loading poly4.poly... done
+
+threads = 9: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  35.79s user 0.19s system 98% cpu 36.431 total
+Loading poly4.poly... done
+
+threads = 10: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.64s user 0.32s system 94% cpu 38.993 total
+Loading poly4.poly... done
+
+threads = 11: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.17s user 0.26s system 98% cpu 37.163 total
+Loading poly4.poly... done
+
+threads = 12: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  37.11s user 0.38s system 94% cpu 39.855 total
+Loading poly4.poly... done
+
+threads = 13: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.67s user 0.33s system 95% cpu 38.543 total
+Loading poly4.poly... done
+
+threads = 14: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  35.77s user 0.16s system 99% cpu 36.141 total
+Loading poly4.poly... done
+
+threads = 15: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  35.92s user 0.20s system 97% cpu 37.105 total
+Loading poly4.poly... done
+
+threads = 16: range -1000.0 to 1000.0, 4.0E8 slices, precision = 1.0E-6
+
+poly4.poly: +1.00000x^4-10.3000x^3-166.500x^2+835.900x^1+991.100x^0 has 4 roots
+  [-10.999999666227321, -0.9999996665614868, 5.300000333324769, 17.00000033323711]
+
+java Solver --threads $i --slices 400000000 poly4.poly  36.32s user 0.20s system 96% cpu 37.812 total
+
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+
+No, If more threads run than cores available to run, it won't help to speed up. They will eventually be overhead.    
+Therefore, each thread will wait to run. It will spned most time waiting.  
+
+
+
+
+QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+No, it is not constant.
+It can increase the "system load", but, at some point, too many threads will reduce the "system load". This is because the system takes time to manage each thread.
+It will wait until a CPUs is available.
+
