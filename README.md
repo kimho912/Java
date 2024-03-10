@@ -1,3 +1,6 @@
 # This repository is for Java
+Please see P11 to run Ice cream shop (MICE) project.
 
-To run Ice cream shop project. You need Installing Apache Ant, which make runable file.
+Apache Ant is needed to run files:
+ant build
+ant clear
